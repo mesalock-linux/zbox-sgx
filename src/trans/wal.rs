@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::fmt::{self, Debug};
 use std::hash::{Hash, Hasher};

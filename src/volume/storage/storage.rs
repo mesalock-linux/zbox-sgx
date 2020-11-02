@@ -1,8 +1,9 @@
+use std::prelude::v1::*;
 use std::cmp::min;
 use std::error::Error as StdError;
 use std::fmt::{self, Debug, Display};
 use std::io::{Error as IoError, ErrorKind, Read, Result as IoResult, Write};
-use std::sync::{Arc, RwLock, Weak};
+use std::sync::{Arc, SgxRwLock as RwLock, Weak};
 
 use rmp_serde::{Deserializer, Serializer};
 use serde::{Deserialize, Serialize};

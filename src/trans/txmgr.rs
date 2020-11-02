@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::fmt::{self, Debug};
-use std::sync::{Arc, Mutex, RwLock, Weak};
+use std::sync::{Arc, SgxMutex as Mutex, SgxRwLock as RwLock, Weak};
 
 use linked_hash_map::LinkedHashMap;
 
@@ -191,7 +191,7 @@ pub type TxMgrWeakRef = Weak<RwLock<TxMgr>>;
 
 // lock for running exclusive transactions
 lazy_static! {
-    static ref EXCL_TX_LOCK: Arc<Mutex<()>> = { Arc::new(Mutex::new(())) };
+    static ref EXCL_TX_LOCK: Arc<Mutex<()>> = Arc::new(Mutex::new(()));
 }
 
 // Transaction handle

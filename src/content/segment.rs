@@ -1,8 +1,9 @@
+use std::prelude::v1::*;
 use std::error::Error as StdError;
 use std::fmt::{self, Debug};
 use std::io::{Error as IoError, ErrorKind, Read, Result as IoResult, Write};
 use std::ops::{Index, IndexMut, Range};
-use std::sync::{Arc, RwLock};
+use std::sync::{Arc, SgxRwLock as RwLock};
 
 use super::chunk::Chunk;
 use super::{Store, StoreWeakRef};

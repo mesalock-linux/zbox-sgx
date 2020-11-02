@@ -1,6 +1,7 @@
 //! This module is adopted from lz4-rs (https://github.com/bozaro/lz4-rs).
 //! Removed unnecessary functions and libc dependency.
 
+use std::prelude::v1::*;
 use std::cmp;
 use std::ffi::CStr;
 use std::fmt::{Display, Formatter};

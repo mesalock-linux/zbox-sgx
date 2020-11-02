@@ -1,5 +1,6 @@
+use std::prelude::v1::*;
 use std::path::Path;
-use std::sync::{Arc, RwLock};
+use std::sync::{Arc, SgxRwLock as RwLock};
 
 use rmp_serde::{Deserializer, Serializer};
 use serde::{Deserialize, Serialize};

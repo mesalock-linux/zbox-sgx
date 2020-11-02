@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::io::{Result as IoResult, Seek, SeekFrom};
 use std::ops::Index;
 use std::slice::Iter;

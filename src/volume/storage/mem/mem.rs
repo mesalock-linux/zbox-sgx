@@ -1,6 +1,7 @@
+use std::prelude::v1::*;
 use std::collections::HashMap;
 use std::fmt::{self, Debug};
-use std::sync::Mutex;
+use std::sync::{SgxMutex as Mutex};
 
 use base::crypto::{Crypto, Key};
 use base::IntoRef;

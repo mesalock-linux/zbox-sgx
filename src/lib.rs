@@ -95,6 +95,15 @@
 //! [`File`]: struct.File.html
 //! [`RepoOpener`]: struct.RepoOpener.html
 
+#![cfg_attr(all(feature = "mesalock_sgx",
+                not(target_env = "sgx")), no_std)]
+#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
+
+#[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
+#[macro_use]
+extern crate sgx_tstd as std;
+
+
 #[macro_use]
 extern crate cfg_if;
 extern crate env_logger;
@@ -102,9 +111,10 @@ extern crate linked_hash_map;
 #[macro_use]
 extern crate log;
 extern crate rmp_serde;
-extern crate serde;
 #[macro_use]
-extern crate serde_derive;
+extern crate serde;
+//#[macro_use]
+//extern crate serde_derive;
 
 // convert zbox error to IO error
 macro_rules! map_io_err {

@@ -1,5 +1,6 @@
 #![allow(clippy::module_inception)]
 
+use std::prelude::v1::*;
 use std::cmp::min;
 use std::collections::VecDeque;
 use std::fmt::{self, Debug};

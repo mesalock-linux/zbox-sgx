@@ -1,6 +1,7 @@
+use std::prelude::v1::*;
 use std::fmt::{self, Debug};
 use std::io::{Read, Result as IoResult, Write};
-use std::sync::{Arc, RwLock, Weak};
+use std::sync::{Arc, SgxRwLock as RwLock, Weak};
 
 use super::allocator::AllocatorRef;
 use super::storage::{self, Storage, StorageRef};

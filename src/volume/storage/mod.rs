@@ -1,4 +1,5 @@
 #![allow(clippy::module_inception)]
+use std::prelude::v1::*;
 
 mod storage;
 

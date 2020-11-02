@@ -1,5 +1,6 @@
 use std::fmt::{self, Debug};
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
+use std::untrusted::time::SystemTimeEx;
 
 #[cfg(target_arch = "wasm32")]
 use js_sys;

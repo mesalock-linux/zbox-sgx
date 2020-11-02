@@ -1,5 +1,6 @@
+use std::prelude::v1::*;
 use std::fmt::{self, Debug};
-use std::sync::{Arc, RwLock};
+use std::sync::{Arc, SgxRwLock as RwLock};
 
 use linked_hash_map::LinkedHashMap;
 

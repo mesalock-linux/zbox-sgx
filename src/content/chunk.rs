@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::fmt::{self, Debug};
 
 use linked_hash_map::LinkedHashMap;

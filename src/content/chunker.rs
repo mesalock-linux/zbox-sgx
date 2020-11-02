@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::cmp::min;
 use std::fmt::{self, Debug};
 use std::io::{Result as IoResult, Seek, SeekFrom, Write};

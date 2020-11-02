@@ -14,7 +14,8 @@ pub use self::refcnt::RefCnt;
 pub use self::time::Time;
 pub use self::version::Version;
 
-use std::sync::{Arc, Once, RwLock};
+use std::prelude::v1::*;
+use std::sync::{Arc, Once, SgxRwLock as RwLock};
 
 #[cfg(target_os = "android")]
 use std::ptr::NonNull;

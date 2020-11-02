@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use rmp_serde::{Deserializer, Serializer};
 use serde::{Deserialize, Serialize};
 

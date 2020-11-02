@@ -1,8 +1,9 @@
+use std::prelude::v1::*;
 use std::clone::Clone;
 use std::default::Default;
 use std::fmt::{self, Debug};
 use std::ops::Deref;
-use std::sync::{Arc, RwLock, Weak};
+use std::sync::{Arc, SgxRwLock as RwLock, Weak};
 
 use serde::{Deserialize, Serialize};
 

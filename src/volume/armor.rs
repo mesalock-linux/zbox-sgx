@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::fmt::Debug;
 use std::io::{ErrorKind, Read, Write};
 use std::marker::PhantomData;
